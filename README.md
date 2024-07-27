@@ -94,6 +94,31 @@ Finally, calculate the mean absolute deviation of the `math_grade` column. This 
 #Step8
 print(f"Mean Absolute Deviation of Math Grade is: {students.math_grade.mad()}")
 ```
+# Visualize the distribution of student grades
+visualize the distribution
+## Step9
+Now that we’ve summarized student grades using statistics for central tendency and spread, let’s visualize the distribution using a histogram. Use the seaborn `histplot()` function to create a histogram of `math_grade`.
+This ensures that the plots don’t get layered on top of each other. Make sure that you add your code to call `sns.histplot()` above `plt.show()`.
+```python
+#Step9
+sns.histplot(x = 'math_grade', data = students)
+plt.show()
+plt.clf()
+```
+![image](https://github.com/user-attachments/assets/143daee0-c43e-48bb-8a5a-f80bee0e06af)
+
+## Step10
+Another way to visualize the distribution of a quantitative variable is using a box plot. Use the seaborn `boxplot()` function to create a boxplot of `math_grade`.
+Make sure to add this code after the first call to `plt.clf()` from the above plot and before the second call to `plt.show()`.
+```python
+#Step10
+sns.boxplot(x = 'math_grade', data = students)
+plt.show()
+plt.clf()
+```
+![image](https://github.com/user-attachments/assets/3f7b6bfc-8f02-413c-8aec-1f16c4cd2bd5)
+
+
 
 
 
