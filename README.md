@@ -117,6 +117,98 @@ plt.show()
 plt.clf()
 ```
 ![image](https://github.com/user-attachments/assets/3f7b6bfc-8f02-413c-8aec-1f16c4cd2bd5)
+# Summarize mothers' jobs
+Jobs statics
+## Step11
+The `Mjob` column in the dataset contains information about what the students mothers do as a profession. Summarize the Mjob column by printing the number of students who have mothers with each job type.
+Which value of `Mjob` is most common?
+Use the pandas `.value_counts()` method.
+```python
+#Step11
+print(f"Most common data in Mjob is: \n {students.Mjob.value_counts()}")
+
+```
+##Step12
+Now, calculate and print the proportion of students who have mothers with each job type. What proportion of students have mothers who work in health?
+Use `.value_counts(normalize = True)` to calculate the proportion of values in each category.
+```python
+#Step12 
+print(f"Most common data in Mjob is: \n {students.Mjob.value_counts(normalize = True)}")
+
+```
+# Visualize the distribution of mothers' jobs
+relative frequencies
+## Step13 
+Now that we’ve used summary statistics to understand the relative frequencies of different mothers’ jobs, let’s visualize the same information with a bar chart. Use the seaborn `countplot()` function to create a bar chart of the `Mjob` variable.
+```python
+#Step13
+sns.countplot(x = 'Mjob', data = students)
+plt.show()
+plt.clf()
+
+```
+![image](https://github.com/user-attachments/assets/5df580fd-c3bd-4978-bcd9-fd956a131208)
+
+## Step14
+We can also visualize the same information using a pie chart. Create a pie chart of the `Mjob` column.
+```python
+#Step14
+students.Mjob.value_counts().plot.pie()
+plt.show()
+plt.clf()
+```
+![image](https://github.com/user-attachments/assets/fd7015db-613e-42d9-8df4-992361c2bfc6)
+
+# Full Code
+```python
+# Load libraries
+import pandas as pd
+import numpy as np
+import codecademylib3
+import matplotlib.pyplot as plt
+import seaborn as sns
+# Import data
+students = pd.read_csv('students.csv')
+#Step1
+print(students.head())
+#Step2
+print(students.describe(include = 'all'))
+#Step3 
+print(f"Mean of Math Grade is :{students.math_grade.mean()}" )
+#Step4 
+print(f"Median of Math Grade is :{students.math_grade.median()} ")
+#Step5 
+print(f"Mode of Math Grade is :{students.math_grade.mode()} ")
+print(f"Mode of Math Grade is :{students.math_grade.mode()[0]} ")
+#Step6
+print(f"Minimum of Math Grade is :{students.math_grade.min()} ")
+print(f"Maximum of Math Grade is :{students.math_grade.max()} ")
+#step7
+print(f"standard deviation of Math Grade is :{students.math_grade.std()} ")
+#Step8
+print(f"Mean Absolute Deviation of Math Grade is: {students.math_grade.mad()}")
+#Step9
+sns.histplot(x = 'math_grade', data = students)
+plt.show()
+plt.clf()
+#Step10
+sns.boxplot(x = 'math_grade', data = students)
+plt.show()
+plt.clf()
+#Step11
+print(f"Most common data in Mjob is: \n {students.Mjob.value_counts()}")
+#Step12 
+print(f"Most common data in Mjob is: \n {students.Mjob.value_counts(normalize = True)}")
+#Step13
+sns.countplot(x = 'Mjob', data = students)
+plt.show()
+plt.clf()
+#Step14
+students.Mjob.value_counts().plot.pie()
+plt.show()
+plt.clf()
+
+```
 
 
 
