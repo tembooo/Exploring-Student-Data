@@ -71,7 +71,25 @@ Note: that, because of how this function is written, the mode is returned as a p
 print(f"Mode of Math Grade is :{students.math_grade.mode()} ")
 print(f"Mode of Math Grade is :{students.math_grade.mode()[0]} ")
 ```
-![image](https://github.com/user-attachments/assets/8d44a32e-3ee9-4298-a39c-fac06cddf4a1)
+# Summarize the spread of student grades
+Spread Factor is important because evaluate exact position of center location. 
+
+## Step6
+Next, let’s summarize the spread of student grades. Calculate and print the range of the `math_grade` column. `.max()` and `.min()`.
+```python
+
+```
+## Step7 
+Calculate and print the standard deviation of the `math_grade` column. About two thirds of values fall within one standard deviation of the mean. What does this number tell you about how much math grades vary?
+The standard deviation is about 4.6, while the average grade is about 10.4. This means that about two thirds of students are earning a grade between 5.8 (calculated as 10.4 - 4.6) and 15 (calculated as 10.4 + 4.6).
+```python
+
+```
+## Step8 
+Finally, calculate the mean absolute deviation of the `math_grade` column. This is the mean difference between each students’s score and the average score. `.mad()`.
+```python
+
+```
 
 
 
