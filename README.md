@@ -77,18 +77,22 @@ Spread Factor is important because evaluate exact position of center location.
 ## Step6
 Next, let’s summarize the spread of student grades. Calculate and print the range of the `math_grade` column. `.max()` and `.min()`.
 ```python
-
+#Step6
+print(f"Minimum of Math Grade is :{students.math_grade.min()} ")
+print(f"Maximum of Math Grade is :{students.math_grade.max()} ")
 ```
 ## Step7 
 Calculate and print the standard deviation of the `math_grade` column. About two thirds of values fall within one standard deviation of the mean. What does this number tell you about how much math grades vary?
 The standard deviation is about 4.6, while the average grade is about 10.4. This means that about two thirds of students are earning a grade between 5.8 (calculated as 10.4 - 4.6) and 15 (calculated as 10.4 + 4.6).
 ```python
-
+#step7
+print(f"standard deviation of Math Grade is :{students.math_grade.std()} ")
 ```
 ## Step8 
 Finally, calculate the mean absolute deviation of the `math_grade` column. This is the mean difference between each students’s score and the average score. `.mad()`.
 ```python
-
+#Step8
+print(f"Mean Absolute Deviation of Math Grade is: {students.math_grade.mad()}")
 ```
 
 
